@@ -20,6 +20,8 @@ pip install pytest
 
 No es necesario realizar más operaciones.
 
+En caso de que el código de la base de datos no funcione, dispone del código en un bloc de notas.
+
 ## Ejecutando las pruebas ⚙️
 
 Para ejecutar las pruebas debes ir a la dirección donde se encuentre tu fichero y escribir la siguiente orden en **CMD**:
