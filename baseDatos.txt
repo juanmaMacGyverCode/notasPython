@@ -1,0 +1,19 @@
+CREATE DATABASE programaNotas;
+USE programaNotas;
+
+CREATE TABLE usuarios(
+	id SMALLINT AUTO_INCREMENT,
+	nombre VARCHAR(20) NOT NULL,
+	apellidos VARCHAR(20) NOT NULL,
+	usuario VARCHAR(20) NOT NULL,
+	contrasenna VARCHAR(20) NOT NULL,
+	CONSTRAINT pk_id_usuario PRIMARY KEY(id, usuario)
+) ENGINE = InnoDB;
+
+CREATE TABLE notas(
+	id SMALLINT AUTO_INCREMENT,
+	nota VARCHAR(200) NOT NULL,
+	codigoUsuario SMALLINT NOT NULL,
+	CONSTRAINT pk_id PRIMARY KEY(id),
+	CONSTRAINT fk_codigoUsuario FOREIGN KEY (codigoUsuario) REFERENCES usuarios (id) ON DELETE CASCADE ON UPDATE CASCADE 
+) ENGINE = InnoDB;
