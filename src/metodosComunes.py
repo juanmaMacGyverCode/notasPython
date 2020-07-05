@@ -14,7 +14,7 @@ def verificadorHayNumeroLongitud(numeroTexto, dato):
     while len(dato) < 3 or len(dato) > 20 or hayNumero:
         dato = input(textoMostrar(numeroTexto))
         if len(dato) >= 3:
-            hayNumero = verificadorNumero(dato.split(""))
+            hayNumero = verificadorNumero(dato)
     return dato
 
 
