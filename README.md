@@ -22,6 +22,34 @@ No es necesario realizar más operaciones.
 
 En caso de que el código de la base de datos no funcione, dispone del código en un bloc de notas.
 
+### Problemas 🔧
+
+Es posible que puedas no poder conectarte a la base de datos. Hay dos soluciones.
+
+La primera es instalando el conector de **MariaDB** usando **CMD** (en caso de usar MariaDB):
+
+```
+pip3 install pytest
+```
+Una vez hecho esto cambia el conector en el fichero **funcionesSQL.py**:
+
+```
+import metodosComunes
+import mariadb
+import clases
+
+def crearConector():
+    database = mariadb.connect(
+        host="localhost",
+        user="root",
+        passwd="",
+        database="programaNotas"
+    )
+    return database
+```
+
+Si esto no funciona, puede ser que tu intérprete de python esté mal instalada. Para arreglarlo desinstalelo e instalelo de nuevo y sigue los pasos anteriores.
+
 ## Ejecutando las pruebas ⚙️
 
 Para ejecutar las pruebas debes ir a la dirección donde se encuentre tu fichero y escribir la siguiente orden en **CMD**:
